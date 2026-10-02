@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #062B5C;
+    --color-royal: #0B63CE;
+    --color-cyan: #18C7D9;
+    --color-bg: #F7FAFC;
+    --color-text: #102A43;
+  }
+
+  body {
+    background-color: #F7FAFC;
+    color: #102A43;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Brand Custom Classes */
+.bg-brand-navy { background-color: #062B5C; }
+.bg-brand-royal { background-color: #0B63CE; }
+.bg-brand-cyan { background-color: #18C7D9; }
+.bg-brand-bg { background-color: #F7FAFC; }
+
+.text-brand-navy { color: #062B5C; }
+.text-brand-royal { color: #0B63CE; }
+.text-brand-cyan { color: #18C7D9; }
+.text-brand-dark { color: #102A43; }
+
+.border-brand-navy { border-color: #062B5C; }
+.border-brand-royal { border-color: #0B63CE; }
+.border-brand-cyan { border-color: #18C7D9; }
+
+.gradient-hero {
+  background: linear-gradient(135deg, #062B5C 0%, #08438A 50%, #0B63CE 100%);
+}
+
+.gradient-tieup {
+  background: linear-gradient(135deg, #041D3F 0%, #062B5C 60%, #08438A 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(90deg, #18C7D9 0%, #0B63CE 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Print styling for quotation/invoice generation */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
