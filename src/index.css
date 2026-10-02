@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy-950: #041D3F;
+  --color-navy-900: #062B5C;
+  --color-navy-800: #08438A;
+  --color-navy-700: #0D52A3;
+
+  --color-brand-navy: #062B5C;
+  --color-brand-royal: #0B63CE;
+  --color-brand-cyan: #18C7D9;
+  --color-brand-dark: #102A43;
+}
+
 @layer base {
   :root {
     --color-navy: #062B5C;
@@ -26,20 +38,32 @@
   }
 }
 
-/* Brand Custom Classes */
-.bg-brand-navy { background-color: #062B5C; }
-.bg-brand-royal { background-color: #0B63CE; }
-.bg-brand-cyan { background-color: #18C7D9; }
-.bg-brand-bg { background-color: #F7FAFC; }
+/* Fallback Utility Classes for 100% Reliability */
+.bg-navy-950 { background-color: #041D3F !important; }
+.bg-navy-900 { background-color: #062B5C !important; }
+.bg-navy-800 { background-color: #08438A !important; }
+.bg-navy-700 { background-color: #0D52A3 !important; }
 
-.text-brand-navy { color: #062B5C; }
-.text-brand-royal { color: #0B63CE; }
-.text-brand-cyan { color: #18C7D9; }
-.text-brand-dark { color: #102A43; }
+.text-navy-950 { color: #041D3F !important; }
+.text-navy-900 { color: #062B5C !important; }
+.text-navy-800 { color: #08438A !important; }
 
-.border-brand-navy { border-color: #062B5C; }
-.border-brand-royal { border-color: #0B63CE; }
-.border-brand-cyan { border-color: #18C7D9; }
+.border-navy-900 { border-color: #062B5C !important; }
+.border-navy-800 { border-color: #08438A !important; }
+
+.bg-brand-navy { background-color: #062B5C !important; }
+.bg-brand-royal { background-color: #0B63CE !important; }
+.bg-brand-cyan { background-color: #18C7D9 !important; }
+.bg-brand-bg { background-color: #F7FAFC !important; }
+
+.text-brand-navy { color: #062B5C !important; }
+.text-brand-royal { color: #0B63CE !important; }
+.text-brand-cyan { color: #18C7D9 !important; }
+.text-brand-dark { color: #102A43 !important; }
+
+.border-brand-navy { border-color: #062B5C !important; }
+.border-brand-royal { border-color: #0B63CE !important; }
+.border-brand-cyan { border-color: #18C7D9 !important; }
 
 .gradient-hero {
   background: linear-gradient(135deg, #062B5C 0%, #08438A 50%, #0B63CE 100%);
@@ -49,7 +73,7 @@
   background: linear-gradient(135deg, #041D3F 0%, #062B5C 60%, #08438A 100%);
 }
 
-.gradient-accent {
+.gradient-brand-accent {
   background: linear-gradient(90deg, #18C7D9 0%, #0B63CE 100%);
 }
 
